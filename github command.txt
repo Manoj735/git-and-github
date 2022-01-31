@@ -1,0 +1,629 @@
+// git commit and push
+git init
+git add README.md
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Manoj735/Portfolio.git
+git push -u origin main
+
+
+// changes and push
+git add .
+git commit -m "mdfdf dmfd"
+git push 
+// we can push git push first-branch
+
+
+
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~
+$ cd desktop
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop
+$ cd project
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ ls
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ ls -a
+./  ../  .git/
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ ls .git
+HEAD  config  description  hooks/  info/  objects/  refs/
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ touch names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        names.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ mkdir index.html style.css index.js
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ touch dkdk.html
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   names.txt
+
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git commit -m "names.txt file added"
+[master (root-commit) 967b8a4] names.txt file added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ cat names.txt
+MANOJ KUMAR
+FMDMFKDF
+vcmvmc
+mkfmgk
+nnvncvn
+
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add .
+warning: LF will be replaced by CRLF in names.txt.
+The file will have its original line endings in your working directory
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git commit -m "hbdf"
+[master a35b114] hbdf
+ 1 file changed, 6 insertions(+)
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git log
+commit a35b1142e5de88498f5570d31d97a80f6966faa3 (HEAD -> master)
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 11:05:13 2022 +0530
+
+    hbdf
+
+commit 967b8a4907d9228a822ac60c4631edd2a519bd64
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 10:56:28 2022 +0530
+
+    names.txt file added
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ rm -rf names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add .
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git commit -m "deleted"
+[master 7932bfb] deleted
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git log
+commit 7932bfb971f6247927c5cf622ae7e1debc331976 (HEAD -> master)
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 11:06:36 2022 +0530
+
+    deleted
+
+commit a35b1142e5de88498f5570d31d97a80f6966faa3
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 11:05:13 2022 +0530
+
+    hbdf
+
+commit 967b8a4907d9228a822ac60c4631edd2a519bd64
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 10:56:28 2022 +0530
+
+    names.txt file added
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git reset 967b8a4907d9228a822ac60c4631edd2a519bd64
+Unstaged changes after reset:
+D       names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git log
+commit 967b8a4907d9228a822ac60c4631edd2a519bd64 (HEAD -> master)
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 10:56:28 2022 +0530
+
+    names.txt file added
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add .
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    names.txt
+
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ touch surnames.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add .
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> surnames.txt
+
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ vi surnames.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ touch houses.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add .
+warning: LF will be replaced by CRLF in surnames.txt.
+The file will have its original line endings in your working directory
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> houses.txt
+        new file:   surnames.txt
+
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git stash
+Saved working directory and index state WIP on master: 967b8a4 names.txt file added
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git log
+commit 967b8a4907d9228a822ac60c4631edd2a519bd64 (HEAD -> master)
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 10:56:28 2022 +0530
+
+    names.txt file added
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ cat names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git stash pop
+Removing names.txt
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   houses.txt
+        new file:   surnames.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+Dropped refs/stash@{0} (8c6b45d149dbe6ac144a6b21e94ad9e9ed783cb4)
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add .
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git stash
+Saved working directory and index state WIP on master: 967b8a4 names.txt file added
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git stash clear
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git remote add origin https://github.com/Manoj735/git-and-github.git
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git remote -v
+origin  https://github.com/Manoj735/git-and-github.git (fetch)
+origin  https://github.com/Manoj735/git-and-github.git (push)
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 224 bytes | 224.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Manoj735/git-and-github.git
+ * [new branch]      master -> master
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ touch hotel.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add .
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git commit -m "kdfnf"
+[master f5d15f1] kdfnf
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hotel.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ touch roll.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git add .
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git commit -m "added"
+[master fd8a0da] added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 roll.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git log
+commit fd8a0da08eb5381443152238d8a094a27b312f6d (HEAD -> master)
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 11:19:49 2022 +0530
+
+    added
+
+commit f5d15f1ec8d6d38e3fb62b6f20f443f693e81c67
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 11:19:23 2022 +0530
+
+    kdfnf
+
+commit 967b8a4907d9228a822ac60c4631edd2a519bd64 (origin/master)
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 10:56:28 2022 +0530
+
+    names.txt file added
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ ls .git
+COMMIT_EDITMSG  HEAD  ORIG_HEAD  config  description  hooks/  index  info/  logs/  objects/  refs/
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git branch feature
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (feature)
+$ git commit
+On branch feature
+nothing to commit, working tree clean
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (feature)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 417 bytes | 417.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Manoj735/git-and-github.git
+   967b8a4..fd8a0da  master -> master
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (feature)
+$ git push origin feature
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/Manoj735/git-and-github/pull/new/feature
+remote:
+To https://github.com/Manoj735/git-and-github.git
+ * [new branch]      feature -> feature
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (feature)
+$ git clone https://github.com/unnamedka1/Guessing_number_game.git
+Cloning into 'Guessing_number_game'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (feature)
+$ cd '/c/Users/Manoj kumar/Desktop/project/Guessing_number_game'
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/Desktop/project/Guessing_number_game (main)
+$ git remote add upstream https://github.com/unnamedka1/Guessing_number_game.git
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/Desktop/project/Guessing_number_game (main)
+$ git remote -v
+origin  https://github.com/unnamedka1/Guessing_number_game.git (fetch)
+origin  https://github.com/unnamedka1/Guessing_number_game.git (push)
+upstream        https://github.com/unnamedka1/Guessing_number_game.git (fetch)
+upstream        https://github.com/unnamedka1/Guessing_number_game.git (push)
+
+
+
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~
+$ cd desktop
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop
+$ cd project
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project (feature)
+$ cd Guessing_number_game
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (main)
+$ git branch manoj
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (main)
+$ git checkout manoj
+Switched to branch 'manoj'
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git add .
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git commit -m "manoj dummy"
+[manoj c8e6bad] manoj dummy
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dummy.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git log
+commit c8e6badc40f45860b5be8e4c28b65838e03b3c73 (HEAD -> manoj)
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 12:52:00 2022 +0530
+
+    manoj dummy
+
+commit f78e5f4dc2150fc16514a38ed651f33b9d39b035 (origin/main, origin/HEAD, main)
+Author: unnamedka1 <78694217+unnamedka1@users.noreply.github.com>
+Date:   Thu Aug 19 20:48:51 2021 +0530
+
+    Add files via upload
+
+commit 93c361ea6592c76a6ed5905e6e307cd7a38ce69a
+Author: unnamedka1 <78694217+unnamedka1@users.noreply.github.com>
+Date:   Thu Aug 19 20:43:07 2021 +0530
+
+    Initial commit
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git push origin manoj
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 321 bytes | 321.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'manoj' on GitHub by visiting:
+remote:      https://github.com/Manoj735/Guessing_number_game/pull/new/manoj
+remote:
+To https://github.com/Manoj735/Guessing_number_game.git
+ * [new branch]      manoj -> manoj
+
+
+
+
+$ git push origin manoj
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 321 bytes | 321.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'manoj' on GitHub by visiting:
+remote:      https://github.com/Manoj735/Guessing_number_game/pull/new/manoj
+remote:
+To https://github.com/Manoj735/Guessing_number_game.git
+ * [new branch]      manoj -> manoj
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ touch names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git add .
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git commit -m "names.txt added"
+[manoj 25fe487] names.txt added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 names.txt
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git push origin manoj
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 243 bytes | 243.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Manoj735/Guessing_number_game.git
+   c8e6bad..25fe487  manoj -> manoj
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git log
+commit 25fe48711e7d499b651ea4d775ce33a0c5a671d6 (HEAD -> manoj, origin/manoj)
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 13:16:54 2022 +0530
+
+    names.txt added
+
+commit c8e6badc40f45860b5be8e4c28b65838e03b3c73
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 12:52:00 2022 +0530
+
+    manoj dummy
+
+commit f78e5f4dc2150fc16514a38ed651f33b9d39b035 (origin/main, origin/HEAD, main)
+Author: unnamedka1 <78694217+unnamedka1@users.noreply.github.com>
+Date:   Thu Aug 19 20:48:51 2021 +0530
+
+    Add files via upload
+
+commit 93c361ea6592c76a6ed5905e6e307cd7a38ce69a
+Author: unnamedka1 <78694217+unnamedka1@users.noreply.github.com>
+Date:   Thu Aug 19 20:43:07 2021 +0530
+
+    Initial commit
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git reset c8e6badc40f45860b5be8e4c28b65838e03b3c73
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git status
+On branch manoj
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        names.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git add .
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git stash
+Saved working directory and index state WIP on manoj: c8e6bad manoj dummy
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git log
+commit c8e6badc40f45860b5be8e4c28b65838e03b3c73 (HEAD -> manoj)
+Author: Manoj Kumar <prajapatmanoj609@gmail.com>
+Date:   Sun Jan 30 12:52:00 2022 +0530
+
+    manoj dummy
+
+commit f78e5f4dc2150fc16514a38ed651f33b9d39b035 (origin/main, origin/HEAD, main)
+Author: unnamedka1 <78694217+unnamedka1@users.noreply.github.com>
+Date:   Thu Aug 19 20:48:51 2021 +0530
+
+    Add files via upload
+
+commit 93c361ea6592c76a6ed5905e6e307cd7a38ce69a
+Author: unnamedka1 <78694217+unnamedka1@users.noreply.github.com>
+Date:   Thu Aug 19 20:43:07 2021 +0530
+
+    Initial commit
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git push origin manoj -f
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Manoj735/Guessing_number_game.git
+ + 25fe487...c8e6bad manoj -> manoj (forced update)
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (manoj)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (main)
+$ git log
+commit f78e5f4dc2150fc16514a38ed651f33b9d39b035 (HEAD -> main, origin/main, origin/HEAD)
+Author: unnamedka1 <78694217+unnamedka1@users.noreply.github.com>
+Date:   Thu Aug 19 20:48:51 2021 +0530
+
+    Add files via upload
+
+commit 93c361ea6592c76a6ed5905e6e307cd7a38ce69a
+Author: unnamedka1 <78694217+unnamedka1@users.noreply.github.com>
+Date:   Thu Aug 19 20:43:07 2021 +0530
+
+    Initial commit
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (main)
+$ git fetch --all --prune
+Fetching origin
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (main)
+$ git push origin main
+Everything up-to-date
+
+Manoj kumar@LAPTOP-KGFLBM4R MINGW64 ~/desktop/project/Guessing_number_game (main)
+$
+
